@@ -1,0 +1,22 @@
+{
+  "name": "hello-node",
+  "version": "1.0.0",
+  "description": "Setting up a node.js project with basic continuous delivery via Heroku",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jespy3/hello-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jespy3/hello-node/issues"
+  },
+  "homepage": "https://github.com/jespy3/hello-node#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
