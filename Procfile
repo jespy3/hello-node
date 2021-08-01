@@ -1,1 +1,1 @@
-web: PORT=1337 node app.js
+web: node app.js
