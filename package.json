@@ -18,5 +18,8 @@
   "homepage": "https://github.com/jespy3/hello-node#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "engines": {
+    "node": "14.x"
   }
 }
