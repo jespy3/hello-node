@@ -1,5 +1,7 @@
 # hello-node
-Setting up a node.js project with basic continuous delivery via Heroku
+Setting up a node.js project with basic continuous delivery via Heroku.
+
+We'll set up our CI/CD (Continuous Integration/Continuous Deployment) pipeline to a basic Hello World application first so that we can continously push our code changes to a running application in a production environment.
 
 ## Initialise a Git repo
 
@@ -17,17 +19,49 @@ Setting up a node.js project with basic continuous delivery via Heroku
 
 ## Set up a basic node.js app
 
-1. Install []
+These steps follow [this guide to set up a Hello World Node.js app](https://medium.com/@adnanrahic/hello-world-app-with-node-js-and-express-c1eb7cfa8a30).
+
+1. Download [Node 14.17.4](https://nodejs.org/en/download/) (Node's latest [LTS release](https://stackoverflow.com/questions/34829167/what-is-the-difference-between-the-lts-version-and-the-stable-version-of-node-js))
+    - This will also install NPM (Node Package Manager) to allow you to install and manage other node packages easily.
+1. Run `npm init`, "Enter" your way through all of them EXCEPT setting entry point to `app.js`.
+1. Open the project in a code editor. There should be three files now - the readme, the gitignore, and a package.json file. 
+1. In your terminal, run `npm install express --save`.
+1. Create a new file called `app.js`.
+1. Have a look at the `app.js` file in this repository to see the basic code for this file. 
 
 
 
 ## Set up a CI/CD pipeline with Heroku
 
+1. Create an account on [Heroku](https://dashboard.heroku.com/apps)
+1. Go to the [getting stared Heroku docs](https://devcenter.heroku.com/start) and choose Node.js.
 
+Setting up a staging environment
+- Create a new app
+- Connect it to GitHub
+- Enable automatic deploys
 
+Create a pipeline
+- Adding the above as a staging environment
+- Create a new app as a production environment
+- Connect to github
 
+Add review apps
+- Enable review apps
+- Check "Create new review apps for new pull requests automatically"
 
 ## Connect to a front end
+
+1. Create index.html and styles.css files.
+1. If you haven't already, add the following into app.js:
+```
+app.use(express.static(__dirname + ''));
+
+
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, '/index.html'));
+});
+```
 
 
 
